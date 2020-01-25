@@ -189,7 +189,7 @@ public:
 				}
 
 				// 80 bytes stride = 64 bytes for 4x4 matrix + 16 bytes for RGBA color + 16 bytes for another RGBA(a_color1).
-				const uint16_t instanceStride = 80;
+				const uint16_t instanceStride = 96;
 				// 11x11 cubes
 				const uint32_t numInstances   = 121;
 
