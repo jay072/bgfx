@@ -188,7 +188,7 @@ public:
 					bgfx::setViewRect(0, 0, 0, uint16_t(m_width), uint16_t(m_height) );
 				}
 
-				// 80 bytes stride = 64 bytes for 4x4 matrix + 16 bytes for RGBA color.
+				// 80 bytes stride = 64 bytes for 4x4 matrix + 16 bytes for RGBA color + 16 bytes for another RGBA(a_color1).
 				const uint16_t instanceStride = 80;
 				// 11x11 cubes
 				const uint32_t numInstances   = 121;
@@ -217,6 +217,12 @@ public:
 							color[2] = bx::sin(time*3.0f)*0.5f+0.5f;
 							color[3] = 1.0f;
 
+							float* a_color1 = (float*)&data[80];
+							a_color1[0] = 1.0f;
+							a_color1[1] = 1.0f;
+							a_color1[2] = 1.0f;
+							a_color1[3] = 1.0f;
+							
 							data += instanceStride;
 						}
 					}

@@ -7,3 +7,4 @@ vec4 i_data1     : TEXCOORD6;
 vec4 i_data2     : TEXCOORD5;
 vec4 i_data3     : TEXCOORD4;
 vec4 i_data4     : TEXCOORD3;
+vec4 a_color1    : TEXCOORD2;
